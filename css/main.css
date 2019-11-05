@@ -6,63 +6,12 @@ html {
     line-height: 1.4;
 }
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
-
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
-
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
-}
-
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
-
-
 /* ===== Initializr Styles ==================================================
    Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
    ========================================================================== */
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
-}
-
-.wrapper {
-    width: 90%;
-    margin: 0 5%;
 }
 
 /* ===================
@@ -73,42 +22,120 @@ body {
     border-bottom: 20px solid #e44d26;
 }
 
-.footer-container,
-.main aside {
-    border-top: 20px solid #e44d26;
+
+/* ============
+    menu-nav
+   ============= */
+
+#menu-nav h1{
+    background-color:#729EBF;
+    border-radius: 6px;
+    margin-bottom:2px;
+    box-shadow: 3px 3px 3px #999;
+    border:solid 1px #333A40;
+    font-size: 2em;
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);   
 }
 
-.header-container,
-.footer-container,
-.main aside {
-    background: #f16529;
+#menu-nav {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+    width: 180px;
 }
+
+#menu-nav ul {
+    padding:0;
+    margin:0;
+    list-style:none;
+    text-align: center;
+}
+
+#menu-nav li {
+    background-color:#729EBF; 
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    border-radius: 6px;
+    margin-bottom:2px;
+    box-shadow: 3px 3px 3px #999;
+    border:solid 1px #333A40
+}
+
+#menu-nav li li {
+    max-height:0;
+    overflow: hidden;
+    transition: all .5s;
+    border-radius:0;
+    background: #444;
+    box-shadow: none;
+    border:none;
+    margin:0
+}
+
+#menu-nav a {
+    display:block;
+    text-decoration: none;
+    color: #fff;
+    padding: 8px 0;
+    font-family: verdana;
+    font-size:1.2em
+}
+
+#menu-nav ul li a, #menu li:hover li a {
+    font-size:1em
+}
+
+#menu-nav li:hover {
+    background: #729EBF
+}
+
+#menu-nav li li:hover {
+    background: #999;
+}
+
+#menu-nav ul li:last-child {
+    border-radius: 0 0 6px 6px;
+    border:none;
+}
+
+#menu-nav li:hover li {
+    max-height: 15em;
+}
+
+
+.header-container,
+.footer-container {
+    background: #e44d26;
+}
+
 
 .title {
     color: white;
+}
+
+.footer-container {
+    border-top: 10px solid #e44d26;
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;    
 }
 
 /* ==============
     MOBILE: Menu
    ============== */
 
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-}
-
 nav a {
-    display: block;
-    margin-bottom: 10px;
-    padding: 15px 0;
-
     text-align: center;
     text-decoration: none;
     font-weight: bold;
-
     color: white;
     background: #e44d26;
+    float: right;
+    margin-left: 20px;
+    
 }
 
 nav a:hover,
@@ -126,6 +153,7 @@ nav a:hover {
 
 .main {
     padding: 30px 0;
+    
 }
 
 .main article h1 {
@@ -139,8 +167,9 @@ nav a:hover {
 
 .footer-container footer {
     color: white;
-    padding: 20px 0;
+    padding: 20px 0; 
 }
+
 
 /* ===============
     ALL: IE Fixes
@@ -154,16 +183,18 @@ nav a:hover {
    Author's custom styles
    ========================================================================== */
 
+.main-container {
+    width: 80%;
+    height: 500px;
+    margin-left: 50px;
+    margin-top: 50px;
+    padding:50px; 
+    border:2px solid red;
+}
 
-
-
-
-
-
-
-
-
-
+.main-container .row {
+    height: 400px;
+}
 
 
 
@@ -171,19 +202,24 @@ nav a:hover {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
+/* 
 @media only screen and (min-width: 480px) {
-
+ */
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
 
-    nav a {
-        float: left;
-        width: 27%;
+   /*  nav ul {
+        width: 50%;
         margin: 0 1.7%;
         padding: 25px 2%;
         margin-bottom: 0;
+        border-radius: 15px;
+        display: flex;
+    }
+
+    nav li{
+        width:250px;
     }
 
     nav li:first-child a {
@@ -193,6 +229,12 @@ nav a:hover {
     nav li:last-child a {
         margin-right: 0;
     }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+ */
 
 /* ========================
     INTERMEDIATE: IE Fixes
@@ -228,11 +270,7 @@ nav a:hover {
         float: left;
     }
 
-    nav {
-        float: right;
-        width: 38%;
-    }
-
+    
 /* ============
     WIDE: Main
    ============ */
@@ -257,117 +295,5 @@ nav a:hover {
     .wrapper {
         width: 1026px; /* 1140px - 10% for margins */
         margin: 0 auto;
-    }
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
-
-.invisible {
-    visibility: hidden;
-}
-
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.clearfix {
-    *zoom: 1;
-}
-
-/* ==========================================================================
-   Print styles
-   ========================================================================== */
-
-@media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
     }
 }
