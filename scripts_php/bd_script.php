@@ -147,5 +147,61 @@ try {
         echo 'ERROR IN TUSER : ' . $e->getMessage();
     }  
     
+    try {
+    $cat1 = "INSERT INTO $TB_Cat (Name_cat)
+    VALUES ('Maths')";
+    $conn->prepare($cat1)->execute();
+    echo 'MATH INSERTED';
+
+    }catch (PDOException $e) {
+        echo 'ERROR IN INSERT : ' . $e->getMessage();
+    } 
+
+    try {
+        $cat2 = "INSERT INTO $TB_Cat (Name_cat)
+        VALUES ('Cinema')";
+        $conn->prepare($cat2)->execute();
+        echo 'CINEMA INSERTED';
+        
+        }catch (PDOException $e) {
+            echo 'ERROR IN INSERT : ' . $e->getMessage();
+        } 
+
+    try {
+        $cat3 = "INSERT INTO $TB_Cat (Name_cat)
+        VALUES ('Sport')";
+        $conn->prepare($cat3)->execute();
+        echo 'Sport INSERTED';
+    }catch (PDOException $e) {
+        echo 'ERROR IN INSERT : ' . $e->getMessage();
+    } 
+
+    try {
+        $cat4 = "INSERT INTO $TB_Cat (Name_cat)
+        VALUES ('Musique')";
+        $conn->prepare($cat4)->execute();
+        echo 'MUSIQUE INSERTED';
+    }catch (PDOException $e) {
+        echo 'ERROR IN INSERT : ' . $e->getMessage();
+    } 
+
+    try {
+        $cat5 = "INSERT INTO $TB_Cat (Name_cat)
+        VALUES ('Histoire')";
+        $conn->prepare($cat5)->execute();
+        echo 'HISTOIRE INSERTED';
+    }catch (PDOException $e) {
+        echo 'ERROR IN INSERT : ' . $e->getMessage();
+    } 
+
+    try {
+        $cat6 = "INSERT INTO $TB_Cat (Name_cat)
+        VALUES ('Geographie')";
+        $conn->prepare($cat6)->execute();
+        echo 'GEOGRAPHIE INSERTED';
+    }catch (PDOException $e) {
+        echo 'ERROR IN INSERT : ' . $e->getMessage();
+    } 
+
 
 ?>

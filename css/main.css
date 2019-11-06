@@ -15,7 +15,7 @@ body {
 }
 
 /* ===================
-    ALL: Orange Theme
+    ALL: Orange Theme ->not so orange
    =================== */
 
 .header-container {
@@ -149,11 +149,12 @@ border-color: #31347B;
 }
 
 .footer-container {
-    border-top: 10px solid #e44d26;
+    border-bottom: 1px solid #e44d26;
+
     position: absolute;
     height:80px;
     margin-top: 10px;
- 
+    
     width: 100%;
     text-align: center;    
 }
@@ -228,7 +229,15 @@ nav a:hover {
 }
 
 .main-container .row {
+
+    overflow:scroll;
+    overflow-x:hidden;
     height: 400px;
+    
+}
+
+.main-container {
+    width:60%;
 }
 
 
