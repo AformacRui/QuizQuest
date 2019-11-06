@@ -1,3 +1,34 @@
+<?php
+include("head.php");
+?>
+
+<div class="form-container">
+            <form action="scripts_php/insert_quiz.php" method="post">
+                <span class="quizT">Insert your Quiz here<br><br></span>
+
+                Your Nickname: <input type="text" name="nickname"><br>
+                Quiz name: <input type="text" name="qname"><br>
+                Category: <input type="text" name="cat"><br><br><br>  <!-- change to a radio option latter -->
+
+                <?php  
+                $max=10;
+                $j=$max+1;
+                for($i=0; $i<$max;$i++)
+                    for($i=0 ; $i<$max ; $i++)
+                    {   
+                        
+                        echo "Question: <input type='text' name='$i'> <br>";
+                        echo "Response: <input type='text' name='$j'> <br>";
+                        echo "--------------------------------------- <br> <br>";
+                        $j++;
+                    
+                    }
+                ?>
+
+                <input type="submit">
+            </form>
+        </div>
+
 <?php 
 define ('DB_USER', 'Herui');
 define ('DB_PASSWORD', '143OMG541ZINK');

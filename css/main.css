@@ -20,7 +20,38 @@ body {
 
 .header-container {
     border-bottom: 20px solid #e44d26;
+    width:100%;
 }
+
+
+.hmenu{
+    display: inline;
+    display:flex;
+    margin-right:30px; 
+    list-style: none;
+     
+}
+
+.btn-default{
+        
+        color:white !important;
+        background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+        background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+ 
+}
+ 
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+ 
+ 
+ 
+background:#729EBF;
+ 
+color:#FFF;
+ 
+border-color: #31347B;
+ 
+}
+
 
 
 /* ============
@@ -88,7 +119,7 @@ body {
 }
 
 #menu-nav li:hover {
-    background: #729EBF
+    background: #729EBF;
 }
 
 #menu-nav li li:hover {
@@ -107,18 +138,22 @@ body {
 
 .header-container,
 .footer-container {
-    background: #e44d26;
+    background: #2f005a;
+    
 }
 
 
 .title {
-    color: white;
+    padding-top:7.5px;
+    color: #e44d26;
 }
 
 .footer-container {
     border-top: 10px solid #e44d26;
-    position: fixed;
-    bottom: 10px;
+    position: absolute;
+    height:80px;
+    margin-top: 10px;
+ 
     width: 100%;
     text-align: center;    
 }
@@ -166,7 +201,7 @@ nav a:hover {
 }
 
 .footer-container footer {
-    color: white;
+    color: #e44d26;
     padding: 20px 0; 
 }
 
@@ -202,20 +237,21 @@ nav a:hover {
 /* ==========================================================================
    Media Queries
    ========================================================================== */
-
-@media only screen and (min-width: 480px) {
+ /*@media only screen and (min-width: 480px) {
 
 /* ====================
     INTERMEDIATE: Menu
    ==================== */
 
-    nav ul {
+/*     nav ul {
         width: 50%;
         margin: 0 1.7%;
         padding: 25px 2%;
         margin-bottom: 0;
         border-radius: 15px;
+        list-style: none;
         display: flex;
+        
     }
 
     nav li{
@@ -233,21 +269,21 @@ nav a:hover {
     nav {
         float: right;
         width: 38%;
-    }
+    } */
  
 
 /* ========================
     INTERMEDIATE: IE Fixes
    ======================== */
 
-    nav ul li {
+      nav ul li {
         display: inline;
-    }
+    } 
 
     .oldie nav a {
         margin: 0 0.7%;
     }
-}
+
 
 @media only screen and (min-width: 768px) {
 
@@ -269,7 +305,12 @@ nav a:hover {
     .title {
         float: left;
     }
-
+    nav {
+        /*float: right;*/
+        width: 38%;
+        list-style: none;
+        display: flex;
+    }
     
 /* ============
     WIDE: Main

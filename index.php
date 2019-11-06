@@ -31,16 +31,16 @@
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">QuizQuest</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#!" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Connexion</a></li>
-                        <li><a href="#!" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Créer un Quiz</a></li>
+                <nav class="d-inline">
+                    <ul class="flex-column flex-sm-row">
+                        <li><a href="#!" class="btn btn-default btn-lg" role="button" aria-pressed="true"><p>Connexion</p></a></li>
+                        <li><a href="#!" class="btn btn-default btn-lg" role="button" aria-pressed="true"><p>Q_Créateur</p></a></li>
                     </ul>
                 </nav>
             </header>
         </div>
 
-        <div class="container-fluid d-flex">
+        <div class="container-fluid d-flex ">
             <ul id="menu-nav" class="align-self-center mr-3">
                 <h1>Thèmes</h1>
             <li><a href="#">Maths</a>
@@ -97,16 +97,16 @@
 
         <div class="main-container">
             <div class="row">
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">1</div>
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">2</div>
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">3</div>
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">4</div>
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">5</div>
-                <div class="col-xs-10 col-sm-3 col-lg-4 list-group-item d-flex justify-content-between align-items-center">6</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">1</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">2</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">3</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">4</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">5</div>
+                <div class="col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">6</div>
             </div>
         </div> <!-- #main-container -->
         
-
+        </div>
         <div class="footer-container">
             <footer class="wrapper">
                 <h3>footer</h3>
