@@ -7,22 +7,22 @@ include("head.php");
 
 <div class="container-fluid d-flex ">
 
-    <div class="form-container">
+    <div class="form-container d-flex">
     <?php include("../template/main_nav.php"); ?>
             
             <div class="main-container">
-            <div class="row">
+            <div class="main-box">
             <form action="quiz_inserted.php" method="post" class="form_inserted">
-                <span class="quizT">Insert your Quiz here<br><br></span>
+                <h3>Insert your Quiz here</h1><br><br>
 
-                Your Nickname: <input type="text" name="nickname"><br>
-                Quiz name: <input type="text" name="qname"><br>
-                Category:<br> <input type="radio" name="cat" value="Maths">Maths<br>
-                           <input type="radio" name="cat" value="Cinema">Cinéma<br>
-                           <input type="radio" name="cat" value="Sport">Sport<br>
-                           <input type="radio" name="cat" value="Musique">Musique<br>
-                           <input type="radio" name="cat" value="Histoire">Histoire<br>
-                           <input type="radio" name="cat" value="Geographie">Géographie<br><br><br> 
+                <h5>Your Nickname:</h5> <input type="text" name="nickname"><br>
+                <h5>Quiz name:</h5> <input type="text" name="qname"><br>
+                <h5>Category:</h5><br><input class="rad" type="radio" name="cat" value="Maths">Maths<br>
+                           <input class="rad" type="radio" name="cat" value="Cinema">Cinéma<br>
+                           <input class="rad" type="radio" name="cat" value="Sport">Sport<br>
+                           <input class="rad" type="radio" name="cat" value="Musique">Musique<br>
+                           <input class="rad" type="radio" name="cat" value="Histoire">Histoire<br>
+                           <input class="rad" type="radio" name="cat" value="Geographie">Géographie<br><br><br> 
 
                 <?php  
                 $max=10;
@@ -30,9 +30,9 @@ include("head.php");
                 for($i=0; $i<$max;$i++)
                     for($i=0 ; $i<$max ; $i++)
                     {   
-                        
-                        echo "Question: <input type='text' name='$i'> <br>";
-                        echo "Response: <input type='text' name='$j'> <br>";
+                        $n=$i+1;
+                        echo "$n. Question : <input type='text' name='$i'> <br>";
+                        echo "$n. Response : <input type='text' name='$j'> <br><br>";
                         
                         $j++;
                     

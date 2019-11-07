@@ -226,6 +226,7 @@ nav a:hover {
     margin-top: 50px;
     padding:50px; 
     border:2px solid red;
+    display: flex;
 }
 
 .main-container .row {
@@ -236,9 +237,24 @@ nav a:hover {
     
 }
 
-.main-container {
-    width:60%;
+.main-container .main-box{
+    width:90%;
+    overflow:scroll;
+    overflow-x:hidden;
+    height: 400px;
+    text-align: center;
+    
 }
+
+.main-container h3{
+    color:#e44d26;
+}
+
+.form-container{
+    width:90%;
+}
+
+
 
 
 
