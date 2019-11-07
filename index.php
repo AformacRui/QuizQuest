@@ -27,7 +27,13 @@
         <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <?php include("template/header.php");?>
+        <?php 
+           session_start();
+           if(isset($_SESSION['userName'])) {
+             echo "Your session is running " . $_SESSION['userName'];
+           }
+        
+        include("template/header.php");?>
 
         <div class="container-fluid d-flex ">
             
