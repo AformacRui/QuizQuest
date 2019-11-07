@@ -1,5 +1,10 @@
 <?php
 include("head.php");
+
+session_start();
+if(isset($_SESSION['userName'])) {
+  echo "Your session is running " . $_SESSION['userName'];
+}
 ?>
 
 <body>
@@ -31,15 +36,15 @@ include("head.php");
                     for($i=0 ; $i<$max ; $i++)
                     {   
                         $n=$i+1;
-                        echo "$n. Question : <input type='text' name='$i'> <br>";
-                        echo "$n. Response : <input type='text' name='$j'> <br><br>";
+                        echo "$n. Question : <input type='text' name='$i' style='width: 70%; height:10%';> <br>";
+                        echo "$n. Response : <input type='text' name='$j' style='width: 70%; height:10%'> <br><br>";
                         
                         $j++;
                     
                     }
                 ?>
 
-            <a a href="index.php"><input type="submit"></a>
+            <input type="submit">
             </form>
             </div>
             </div>

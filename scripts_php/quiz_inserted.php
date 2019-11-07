@@ -2,22 +2,12 @@
 
     include("head.php");
     
-    define ('DB_USER', 'Herui');
-    define ('DB_PASSWORD', '143OMG541ZINK');
-    define ('DB_HOST', 'localhost');
-    define ('DB_NAME','QuizQuest');
+   include("connexion.php");
 
-
-    $TB_Tuser = "USER_Type";
-    $TB_Question = "Question";
-    $TB_Response = "Response";
-    $TB_QUIZ = "Quiz";
-    $TB_Cat ="Category";
-    $TB_per = "Person";
-
-    $conn = new PDO("mysql:host=".DB_HOST.";dbname=".DB_NAME,DB_USER,DB_PASSWORD);
-
-
+   session_start();
+   if(isset($_SESSION['userName'])) {
+     echo "Your session is running " . $_SESSION['userName'];
+   }
 
     $qnick=$_POST["nickname"]; 
     $qname = $_POST["qname"];
@@ -53,7 +43,14 @@
         echo 'ERROR IN CATEGORY' . $e->getMessage();
     } */
 
+    $stmt = $conn->prepare("SELECT * FROM $TB_per where Nickname= '$qnick'");
+    $stmt->execute();
 
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach($stmt->fetchAll() as $k=>$v) {
+            $id_per =$v['ID_per'];
+            //echo $id_cat;
+    }
 
     $stmt = $conn->prepare("SELECT ID_category FROM $TB_Cat where Name_cat= '$qcat'");
     $stmt->execute();
@@ -66,8 +63,8 @@
 
     //var_dump($id_cat);
     try{
-        $quiz = "INSERT INTO $TB_QUIZ (id_cat,Nom,Creator)
-        VALUES ('$id_cat','$qname','$qnick')";
+        $quiz = "INSERT INTO $TB_QUIZ (id_cat,Nom,Creator,active)
+        VALUES ('$id_cat','$qname','$qnick',0)";
         $conn->prepare($quiz)->execute();
     }catch (PDOException $e) {
         echo 'ERROR IN QUIZ' . $e->getMessage();
@@ -81,6 +78,16 @@
             $id_quiz =$v['ID_quiz'];
             //echo $id_quiz;
     } 
+
+
+    try{
+        $quiz = "INSERT INTO $TB_person_quiz (ID_person,ID_quiz)
+        VALUES ('$id_per','$id_quiz')";
+        $conn->prepare($quiz)->execute();
+    }catch (PDOException $e) {
+        echo 'ERROR IN QUIZ' . $e->getMessage();
+    }
+
 
 
     for($i=0 ; $i<10;$i++)
@@ -141,6 +148,8 @@ foreach($stmt->fetchAll() as $k=>$v) {
     <div class="footer-container">
             <?php include("../template/footer.php"); ?>
         </div>
+
+
 
 
 </body>
