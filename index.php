@@ -34,7 +34,7 @@
             <?php include("template/main_nav.php"); ?>
 
 
-        <div class="main-container">
+        <div class="main-container" id='validChoice'>
             <div class="row">
                 <?php include("template/vitrine.php"); ?>
             </div>
