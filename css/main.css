@@ -230,7 +230,7 @@ nav a:hover {
 }
 
 .main-container .row {
-
+    width:105%;
     overflow:scroll;
     overflow-x:hidden;
     height: 400px;
