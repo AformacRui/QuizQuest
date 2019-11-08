@@ -3,7 +3,7 @@ include("connexion.php");
 
 ?>
 
-<div class="quizTest">
+
 
 <?php
     

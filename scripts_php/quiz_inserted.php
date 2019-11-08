@@ -9,7 +9,7 @@
      echo "Your session is running " . $_SESSION['userName'];
    }
 
-    $qnick=$_POST["nickname"]; 
+    $qnick=$_SESSION['userName']; 
     $qname = $_POST["qname"];
 
     $qcat = $_POST["cat"];
@@ -135,7 +135,7 @@ foreach($stmt->fetchAll() as $k=>$v) {
     <div class="container-fluid d-flex ">
 
     <div class="form-container d-flex">
-    <?php include("../template/main_nav.php"); ?>
+    <?php include("../template/main_nav_global.php"); ?>
             
             <div class="main-container">
             <div class="main-box">

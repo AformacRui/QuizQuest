@@ -14,7 +14,7 @@
     <div class="container-fluid d-flex ">
 
     <div class="form-container d-flex">
-    <?php include("../template/main_nav.php"); ?>
+    <?php include("../template/main_nav_global.php"); ?>
     <div class="main-container">
             <div class="main-box">
                 <br><br><br><br>

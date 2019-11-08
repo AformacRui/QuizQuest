@@ -1,7 +1,6 @@
 <?php  
-    include("scripts_php/connexion.php");
-    include("function/CharQuizFunc.php"); 
-    $listitems6=NULL;
+    include("../scripts_php/connexion.php");
+    include("../function/CharQuizFunc.php"); 
 ?>
 
 <ul id="menu-nav" class="align-self-center mr-3">
@@ -108,18 +107,14 @@
             <li><a href="">Géographie</a>
                 <ul>
                 <?php
-                     $listitems6 = chargequizmenu($TB_QUIZ,$conn,6,0);
+                     $listitems6= chargequizmenu($TB_QUIZ,$conn,6,0);
 
                         //echo $listitems;
-                        if($listitems6!=NULL){
+                        if($listitems6!==NULL){
                             foreach($listitems6 as $i=>$list)
                             {
                                 echo "<li><a href='template/response.php'>$list</a></li>";
                             }
-                        }
-
-                        else{
-                            echo "<li><a href='scripts_php/insert_quiz.php'>Create</a></li>";
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
