@@ -230,7 +230,9 @@ nav a:hover {
     margin-left: 50px;
     margin-top: 50px;
     padding:50px; 
-    border:2px solid red;
+    /**
+        border:2px solid red;
+    */
     display: flex;
 }
 
@@ -262,12 +264,24 @@ nav a:hover {
 }
 
 .question{
-    width:100%;
+    height: 50px;
     text-align: center;
     font-style: oblique;
-    color: rgb(78, 50, 205);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    color: rgb(61, 78, 175);
+    
 }
 
+.reponse{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+}
 
 
 
