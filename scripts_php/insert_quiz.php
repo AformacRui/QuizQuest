@@ -1,5 +1,6 @@
 <?php
 include("head.php");
+include("../scripts_php/connexion.php");
 
 session_start();
 if(isset($_SESSION['userName'])) {
