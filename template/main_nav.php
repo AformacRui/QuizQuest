@@ -16,7 +16,7 @@
                         if($listitems1[0]!==NULL){
                             foreach($listitems1 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID1[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
@@ -47,7 +47,7 @@
                         if($listitems2[0]!==NULL){
                             foreach($listitems2 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID2[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
@@ -75,7 +75,7 @@
                         if($listitems3[0]!==NULL){
                             foreach($listitems3 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID3[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
@@ -102,7 +102,7 @@
                         if($listitems4[0]!==NULL){
                             foreach($listitems4 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID4[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
@@ -128,7 +128,7 @@
                         if($listitems5[0]!==null){
                             foreach($listitems5 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID5[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
@@ -155,7 +155,7 @@
                         if($listitems6[0]!==null){
                             foreach($listitems6 as $i=>$list)
                             {
-                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<li><form action='../scripts_php/response.php' method='post'>";
                                 echo "<input name='id_q' type='hidden' value='$listitemsID6[$i]'>";
                                 echo "<input name='qname' type='submit' value='$list'>";
                                 echo "</form></li>"; 
