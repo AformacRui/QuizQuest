@@ -240,8 +240,7 @@ nav a:hover {
     width:105%;
     overflow:scroll;
     overflow-x:hidden;
-    height: 400px;
-    
+    height: 400px;    
 }
 
 .main-container .main-box{
@@ -283,9 +282,10 @@ nav a:hover {
     justify-content: space-around;
 }
 
-button{
-    background-color: darkorange;
+.main.container .row {
+    background-color: cyan;
 }
+
 
 /* ==========================================================================
    Media Queries

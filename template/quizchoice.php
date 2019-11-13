@@ -4,6 +4,6 @@
     </div>
     <div class="reponse">
         <button class='btn btn-primary btn-lg active'>OUI</button>
-        <button class='btn btn-primary'>NON</button>
+        <button class='btn btn-primary btn-lg active'>NON</button>
     </div> 
 </div>   
