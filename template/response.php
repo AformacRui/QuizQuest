@@ -9,6 +9,8 @@ if(isset($_SESSION['userName'])) {
  echo "Your session is running " . $_SESSION['userName'];
 }
 
+
+
 ?>
 
 
@@ -23,15 +25,22 @@ if(isset($_SESSION['userName'])) {
             <div class="main-container">
             <div class="main-box">
                     <div class="question col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
-                    <h5 id="Qnumber">Question</h5><br>
-                        <div id="Quest"></div>
+                    <h5 id="Qnumber">Question</h5>
+                        <div id="Quest"><?php 
+                        $id=$_POST["id_q"];
+                        $quest= selectquiz('question',$conn,'id_quiz',$id);
+
+                        echo $quest[0];
+                        
+                        ?></div>
                     </div>
 
 
                     <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
                         <form action="" method="post" class="form_resp">
                             <h6>Response</h6> <input type="text" name="responseGiven.$i"><br>
-                            <input type="submit">
+                            <input type="button" value="Next" id="but">
+                            
                         </form>
                     </div>
 
@@ -43,6 +52,9 @@ if(isset($_SESSION['userName'])) {
     <div class="footer-container">
             <?php include("../template/footer.php"); ?>
         </div>
+
+
+        <?php include("../scripts_php/scripts.php");?>
 
 
 </body>

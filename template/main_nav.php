@@ -10,16 +10,25 @@
                 <ul>
                     <?php 
                         $listitems1= chargequizmenu($TB_QUIZ,$conn,1,0);
+                        $listitemsID1 = chargequizmenuID($TB_QUIZ,$conn,1,0);
 
                         //echo $listitems;
-                        if($listitems1!==NULL){
+                        if($listitems1[0]!==NULL){
                             foreach($listitems1 as $i=>$list)
                             {
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID1[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
 
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+/*                                 echo "<li id='$listitemsID1[$i]' value='$listitemsID1[$i]'><a href='../template/response.php'>$list</a></li>";
+                                 */
                             }
+                            
                         }
-
+                        else{
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                        }
 
                     ?>
 <!--                     <li><a href="#">Quizz 1</a></li>
@@ -30,16 +39,24 @@
             </li>
             <li><a href="">Cinéma</a>
                 <ul>
-                    <?php  $listitems2= chargequizmenu($TB_QUIZ,$conn,2,0);
+                    <?php  
+                        $listitems2= chargequizmenu($TB_QUIZ,$conn,2,0);
+                        $listitemsID2 = chargequizmenuID($TB_QUIZ,$conn,2,0);
 
                         //echo $listitems;
-                        if($listitems2!==NULL){
+                        if($listitems2[0]!==NULL){
                             foreach($listitems2 as $i=>$list)
                             {
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID2[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
                             }
                             
                         } 
+                        else{
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                        }
                         ?>
 
 <!--                     <li><a href="#">Quizz 1</a></li>
@@ -50,14 +67,22 @@
             </li>
             <li><a href="">Sport</a>
                 <ul>
-                    <?php  $listitems3= chargequizmenu($TB_QUIZ,$conn,3,0);
+                    <?php  
+                        $listitems3= chargequizmenu($TB_QUIZ,$conn,3,0);
+                        $listitemsID3 = chargequizmenuID($TB_QUIZ,$conn,3,0);
 
                         //echo $listitems;
-                        if($listitems3!==NULL){
+                        if($listitems3[0]!==NULL){
                             foreach($listitems3 as $i=>$list)
                             {
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID3[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
                             }
+                        }
+                        else{
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
                         }
                 ?>
 <!--                     <li><a href="#">Quizz 1</a></li>
@@ -71,13 +96,20 @@
                 <ul>
                     <?php
                      $listitems4= chargequizmenu($TB_QUIZ,$conn,4,0);
+                     $listitemsID4 = chargequizmenuID($TB_QUIZ,$conn,4,0);
 
                         //echo $listitems;
-                        if($listitems4!==NULL){
+                        if($listitems4[0]!==NULL){
                             foreach($listitems4 as $i=>$list)
                             {
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID4[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
                             }
+                        }
+                        else{
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
@@ -90,13 +122,20 @@
                 <ul>
                 <?php
                      $listitems5= chargequizmenu($TB_QUIZ,$conn,5,0);
+                     $listitemsID5 = chargequizmenuID($TB_QUIZ,$conn,5,0);
 
                         //echo $listitems;
-                        if($listitems5!==NULL){
+                        if($listitems5[0]!==null){
                             foreach($listitems5 as $i=>$list)
                             {
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID5[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
                             }
+                        }
+                        else{
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
@@ -109,17 +148,23 @@
                 <ul>
                 <?php
                      $listitems6 = chargequizmenu($TB_QUIZ,$conn,6,0);
+                     $listitemsID6 = chargequizmenuID($TB_QUIZ,$conn,6,0);
+                     //var_dump($listitems6);
 
                         //echo $listitems;
-                        if($listitems6!=NULL){
+                        if($listitems6[0]!==null){
                             foreach($listitems6 as $i=>$list)
                             {
-                                echo "<li><a href='template/response.php'>$list</a></li>";
+                                echo "<li><form action='../template/response.php' method='post'>";
+                                echo "<input name='id_q' type='hidden' value='$listitemsID6[$i]'>";
+                                echo "<input name='qname' type='submit' value='$list'>";
+                                echo "</form></li>"; 
+                                
                             }
                         }
 
                         else{
-                            echo "<li><a href='scripts_php/insert_quiz.php'>Create</a></li>";
+                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
