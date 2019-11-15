@@ -28,3 +28,60 @@ formVal = document.getElementById("formVal");
     xhttp.send("number=" + encodeURIComponent(value));
 
 });  */
+
+
+/*         function sendAJAX(arrayjs)
+        {
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange=function()
+        {
+        if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+                alert('posted value' + xmlhttp.responseText);
+            }
+        }
+        xmlhttp.open("GET","../scripts_php/response_compare?q=" + arrayjs ,true);
+        xmlhttp.send();
+        }
+ */
+
+
+/*        
+        $.post('response_compare.php', {
+        data: resp
+        }, function(response) {
+        console.log(response);
+  }); */
+
+
+
+        
+/*          console.log(arrayjs);
+            $.ajax({
+            type: "POST",
+                url: "../scripts_php/response_compare.php",
+                data: {content : arrayjs},
+                dataType: "text",
+                success: function(html){
+                alert( "Submitted");
+                    }
+          });   */
+          
+        
+         
+       /* $.ajax({ 
+        type: "POST", 
+        url: "../scripts_php/response_compare.php", 
+        data: { kvcArray : myJSONText }, 
+            success: function() { 
+                alert("Success"); 
+            }
+        });  */

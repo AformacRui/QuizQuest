@@ -1,8 +1,10 @@
 <?php
 
-
 if(isset($_SESSION['userName'])) 
 {
+    if($_SESSION['userName']!=="visitor"){
+
+
     $user = $_SESSION['userName'];
     $stmt = $conn->prepare("SELECT * FROM person where nickname = '$user'");
     $stmt->execute();
@@ -11,7 +13,7 @@ if(isset($_SESSION['userName']))
         foreach($stmt->fetchAll() as $k=>$v) {
             $perm=$v['User_type'];
     }
-var_dump($perm);
+//var_dump($perm);
         if($perm=='Dev')
         {
         echo"<div class='header-container'>";
@@ -58,6 +60,9 @@ else {
         echo "</div>";
 }
 
-
+}
+else {
+    $_SESSION['userName'] = "visitor";
+}
 
 ?>

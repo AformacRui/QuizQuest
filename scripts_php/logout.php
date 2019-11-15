@@ -18,7 +18,8 @@ if(isset($_SESSION['userName'])) {
             <div class="main-container">
             <div class="main-box">
                 <h3>Session Terminated</h3>
-                <?php session_destroy() ?>
+                <?php session_destroy(); 
+                $_SESSION['userName']="visitor"?>
                 </div>
             </div>
     </div>
