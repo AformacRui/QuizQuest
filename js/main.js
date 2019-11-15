@@ -1,4 +1,5 @@
 /**
+ *  // JS code
   let event1 = document.getElementById("clickChoice1");
   
   event1.addEventListener("click", function(){
@@ -38,6 +39,7 @@
   });
 */
 
+// JQuery code
 
   $('#clickChoice1').on('click', function(){
     $('#validChoice').load('./template/quizchoice.php');
@@ -68,3 +70,5 @@
     $('#validChoice').load('./template/quizchoice.php');
     $('#clickChoice6').hide();
   })
+
+  .clickChoice1.insertAfter()

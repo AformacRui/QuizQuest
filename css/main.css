@@ -139,7 +139,6 @@ border-color: #31347B;
 .header-container,
 .footer-container {
     background: #2f005a;
-    
 }
 
 
@@ -233,11 +232,11 @@ nav a:hover {
     /**
         border:2px solid red;
     */
-    display: flex;
+    
 }
 
 .main-container .row {
-    width:105%;
+    width:150%;
     overflow:scroll;
     overflow-x:hidden;
     height: 400px;    
@@ -282,9 +281,6 @@ nav a:hover {
     justify-content: space-around;
 }
 
-.main.container .row {
-    background-color: cyan;
-}
 
 
 /* ==========================================================================
