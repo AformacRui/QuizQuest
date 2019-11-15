@@ -1,5 +1,6 @@
 <?php
 include("head.php");
+include("../scripts_php/connexion.php");
 
 session_start();
 if(isset($_SESSION['userName'])) {
@@ -13,14 +14,14 @@ if(isset($_SESSION['userName'])) {
 <div class="container-fluid d-flex ">
 
     <div class="form-container d-flex">
-    <?php include("../template/main_nav.php"); ?>
+    <?php include("../template/main_nav_global.php"); ?>
             
             <div class="main-container">
             <div class="main-box">
             <form action="quiz_inserted.php" method="post" class="form_inserted">
                 <h3>Insert your Quiz here</h1><br><br>
 
-                <h5>Your Nickname:</h5> <input type="text" name="nickname"><br>
+                <!-- <h5>Your Nickname:</h5> <input type="text" name="nickname"><br> -->
                 <h5>Quiz name:</h5> <input type="text" name="qname"><br>
                 <h5>Category:</h5><br><input class="rad" type="radio" name="cat" value="Maths">Maths<br>
                            <input class="rad" type="radio" name="cat" value="Cinema">Cinéma<br>

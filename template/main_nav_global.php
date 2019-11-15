@@ -1,7 +1,6 @@
 <?php  
-    include("scripts_php/connexion.php");
-    include("function/CharQuizFunc.php"); 
-    $listitems6=NULL;
+    include("../scripts_php/connexion.php");
+    include("../function/CharQuizFunc.php"); 
 ?>
 
 <ul id="menu-nav" class="align-self-center mr-3">

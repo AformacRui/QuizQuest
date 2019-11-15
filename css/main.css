@@ -111,8 +111,10 @@ border-color: #31347B;
     color: #fff;
     padding: 8px 0;
     font-family: verdana;
-    font-size:1.2em
+    font-size:1.2em;
 }
+
+
 
 #menu-nav ul li a, #menu li:hover li a {
     font-size:1em
@@ -225,7 +227,7 @@ nav a:hover {
 
 .main-container {
     width: 80%;
-    height: 500px;
+    height: 90vh;
     margin-left: 50px;
     margin-top: 50px;
     padding:50px; 
@@ -239,14 +241,19 @@ nav a:hover {
     width:150%;
     overflow:scroll;
     overflow-x:hidden;
+<<<<<<< HEAD
     height: 400px;    
+=======
+    height: 50vh;
+    
+>>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 }
 
 .main-container .main-box{
     width:90%;
     overflow:scroll;
     overflow-x:hidden;
-    height: 400px;
+    height: 70vh;
     text-align: center;
     
 }
@@ -261,6 +268,7 @@ nav a:hover {
     width:90%;
 }
 
+<<<<<<< HEAD
 .question{
     height: 50px;
     text-align: center;
@@ -271,6 +279,25 @@ nav a:hover {
     color: rgb(61, 78, 175);
     
 }
+=======
+.main-box .response .question{
+    
+    display:inline;
+    display:flex;
+    margin:auto;
+    /* justify-content: space-around; */
+}
+
+.response {
+    margin-left:20%;
+}
+
+.question {
+    margin-right:20%;
+    
+}
+
+>>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 
 .reponse{
     width: 50%;
@@ -292,7 +319,7 @@ nav a:hover {
     INTERMEDIATE: Menu
    ==================== */
 
-/*     nav ul {
+     nav ul {
         width: 50%;
         margin: 0 1.7%;
         padding: 25px 2%;
@@ -318,7 +345,7 @@ nav a:hover {
     nav {
         float: right;
         width: 38%;
-    } */
+    } 
  
 
 /* ========================
