@@ -34,7 +34,7 @@ include("../scripts_php/connexion.php");
                     <h5 id="Qnumber">Question</h5><br>
                         <div id="Quest"><?php 
                         $id=$_POST["id_q"];
-                        var_dump($id);
+                        //var_dump($id);
 
                         $_SESSION["quiz_id"] = $_POST["id_q"];
                         
