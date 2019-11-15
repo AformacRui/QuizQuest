@@ -39,7 +39,6 @@
   });
 */
 
-<<<<<<< HEAD
 // JQuery code
 
   $('#clickChoice1').on('click', function(){

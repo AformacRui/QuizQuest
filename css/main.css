@@ -241,12 +241,7 @@ nav a:hover {
     width:150%;
     overflow:scroll;
     overflow-x:hidden;
-<<<<<<< HEAD
     height: 400px;    
-=======
-    height: 50vh;
-    
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 }
 
 .main-container .main-box{
