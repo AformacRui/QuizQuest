@@ -141,7 +141,6 @@ border-color: #31347B;
 .header-container,
 .footer-container {
     background: #2f005a;
-    
 }
 
 
@@ -232,16 +231,22 @@ nav a:hover {
     margin-left: 50px;
     margin-top: 50px;
     padding:50px; 
-    border:2px solid red;
-    display: flex;
+    /**
+        border:2px solid red;
+    */
+    
 }
 
 .main-container .row {
-    width:105%;
+    width:150%;
     overflow:scroll;
     overflow-x:hidden;
+<<<<<<< HEAD
+    height: 400px;    
+=======
     height: 50vh;
     
+>>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 }
 
 .main-container .main-box{
@@ -257,10 +262,24 @@ nav a:hover {
     color:#e44d26;
 }
 
+
+
 .form-container{
     width:90%;
 }
 
+<<<<<<< HEAD
+.question{
+    height: 50px;
+    text-align: center;
+    font-style: oblique;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    color: rgb(61, 78, 175);
+    
+}
+=======
 .main-box .response .question{
     
     display:inline;
@@ -278,7 +297,16 @@ nav a:hover {
     
 }
 
+>>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 
+.reponse{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+}
 
 
 

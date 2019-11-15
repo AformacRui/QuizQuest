@@ -1,7 +1,14 @@
 <?php include("scripts_php/head.php");
 include("scripts_php/connexion.php");
 
+<<<<<<< HEAD
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+        
+=======
  ?>
+>>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 
     <body>
         <!--[if lt IE 8]>
@@ -26,7 +33,7 @@ include("scripts_php/connexion.php");
             <?php include("template/main_nav.php"); ?>
 
 
-        <div class="main-container">
+        <div class="main-container" id='validChoice'>
             <div class="row">
                 <?php include("template/vitrine.php"); ?>
             </div>
