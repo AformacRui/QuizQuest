@@ -72,6 +72,3 @@
   })
 
   .clickChoice1.insertAfter()
-=======
-
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
