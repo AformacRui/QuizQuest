@@ -1,5 +1,13 @@
 <?php
 
+$DB_USER='Herui';
+$DB_PASSWORD='143OMG541ZINK';
+$DB_HOST= 'localhost';
+$DB_NAME='QuizQuest';
+
+//conexion to server
+$conn = new PDO("mysql:host=".$DB_HOST.";dbname=".$DB_NAME,$DB_USER,$DB_PASSWORD);
+
 if(isset($_SESSION['userName'])) 
 {
     if($_SESSION['userName']!=="visitor"){
@@ -31,7 +39,7 @@ if(isset($_SESSION['userName']))
 
         }
 
-    else {
+    else if($perm=='Admin' || $perm=='Usr'){
         echo"<div class='header-container'>";
                     echo "<header class='wrapper clearfix'>";
                     echo "<a href='../index.php'><h1 class='title'>QuizQuest</h1></a>";

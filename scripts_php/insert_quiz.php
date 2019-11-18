@@ -1,12 +1,15 @@
 <?php
-include("head.php");
-include("../scripts_php/connexion.php");
-
 session_start();
 if(isset($_SESSION['userName'])) {
   echo "Your session is running " . $_SESSION['userName'];
 }
+
+include("head.php");
+include("../scripts_php/connexion.php");
 ?>
+
+
+
 
 <body>
 <?php include("../template/header.php");?>
@@ -32,13 +35,16 @@ if(isset($_SESSION['userName'])) {
 
                 <?php  
                 $max=10;
-                $j=$max+1;
+                $j=$max;
                 for($i=0; $i<$max;$i++)
-                    for($i=0 ; $i<$max ; $i++)
+                   
                     {   
                         $n=$i+1;
-                        echo "$n. Question : <input type='text' name='$i' style='width: 70%; height:10%';> <br>";
-                        echo "$n. Response : <input type='text' name='$j' style='width: 70%; height:10%'> <br><br>";
+                        echo "$n. Question :<br> <input type='text' name='$i' style='width: 70%; height:10%';> <br>";
+                        echo "$n. Bone Response :<br> <input type='text' name='$j.1' style='width: 70%; height:10%'> <br><br>";
+                        echo "$n. Mauvais Response : <input type='text' name='$j.2' style='width: 70%; height:10%'> <br><br>";
+                        echo "$n. Mauvais Response : <input type='text' name='$j.3' style='width: 70%; height:10%'> <br><br>";
+                        echo "$n. Mauvais Response : <input type='text' name='$j.4' style='width: 70%; height:10%'> <br><br><br><br>";
                         
                         $j++;
                     

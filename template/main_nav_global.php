@@ -26,7 +26,14 @@
                             
                         }
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
                         }
 
                     ?>
@@ -54,7 +61,15 @@
                             
                         } 
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
+                            
                         }
                         ?>
 
@@ -81,7 +96,14 @@
                             }
                         }
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
                         }
                 ?>
 <!--                     <li><a href="#">Quizz 1</a></li>
@@ -108,7 +130,14 @@
                             }
                         }
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
@@ -134,7 +163,14 @@
                             }
                         }
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
@@ -163,7 +199,14 @@
                         }
 
                         else{
-                            echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            if($_SESSION['userName']=='visitor')
+                            {
+                                echo "<li><a href='../scripts_php/not_connected.php'>Create</a></li>";
+                            }
+
+                            else {
+                                echo "<li><a href='../scripts_php/insert_quiz.php'>Create</a></li>";
+                            }
                         }
                         ?>
                     <!-- <li><a href="#">Quizz 1</a></li>
