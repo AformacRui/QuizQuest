@@ -60,6 +60,7 @@ try{
         ID_response int(20) AUTO_INCREMENT NOT NULL,
         id_quiz INT(20),
         Response TEXT,
+        valor INT(1),
         PRIMARY KEY (ID_response),
         FOREIGN KEY (id_quiz) references $TB_QUIZ(ID_quiz)
         )";

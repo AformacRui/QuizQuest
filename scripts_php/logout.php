@@ -5,6 +5,7 @@ if(isset($_SESSION['userName'])) {
 }
 include("head.php");
 include("../scripts_php/connexion.php");
+$_SESSION['userName']="visitor";
 
 
 ?>
@@ -18,9 +19,9 @@ include("../scripts_php/connexion.php");
             
             <div class="main-container">
             <div class="main-box">
+            
                 <h3>Session Terminated</h3>
-                <?php session_destroy(); 
-                $_SESSION['userName']="visitor"?>
+                
                 </div>
             </div>
     </div>

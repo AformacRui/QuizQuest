@@ -1,6 +1,57 @@
 <?php 
+           session_start();
+           if(isset($_SESSION['userName'])) {
+             echo "Your session is running " . $_SESSION['userName'];
+           }
+           else{
+            $_SESSION['userName'] = "visitor";
+           }
+
 include("head.php");
 include("../scripts_php/connexion.php");
+
+
+if(isset($_SESSION['userName'])=="visitor"){
+
+    $exist=false;
+
+    $stmt = $conn->prepare("SELECT * FROM $TB_per");
+    $stmt->execute();
+
+    $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+    foreach($stmt->fetchAll() as $k=>$v) {
+            $nick_db[$k] =$v['Nickname'];    
+    }
+
+    $nick=$_POST["nickRequest"];
+    $pass=$_POST["PassRequest"];
+    
+    foreach($nick_db as $db){
+        if(strcmp($nick,$db) == 0){
+            $exist=true;
+        }
+    }
+
+    if($exist==true){
+        $Texist="Account already exists!!";
+    }
+    else{
+        $_SESSION['userName'] = $nick;
+
+        try {
+            $dev1 = "INSERT INTO $TB_per (Nickname, PassW, User_type)
+            VALUES ('$nick','$pass','Usr')";
+            $conn->prepare($dev1)->execute();
+            echo 'USER INSERTED';
+        }catch (PDOException $e) {
+            echo 'ERROR IN INSERT : ' . $e->getMessage();
+        } 
+    }
+    
+    
+    
+}
+
 
 ?>
 
@@ -19,22 +70,19 @@ include("../scripts_php/connexion.php");
 
 <?php
 
-if(isset($_SESSION['userName'])==FALSE){
-    echo "<h3>You are allready connected!!</h3>";
+$verify=$_SESSION['userName'];
+if(strcmp($verify,$nick)==0){
+
+    echo "<h3>User Inserted and Connected!</h3>";
     
 }
-else{
-    echo "<h3>User Inserted!</h3>";
-    $nick=$_POST["nickRequest"];
-    $pass=$_POST["PassRequest"];
-        try {
-            $dev1 = "INSERT INTO $TB_per (Nickname, PassW, User_type)
-            VALUES ('$nick','$pass','Usr')";
-            $conn->prepare($dev1)->execute();
-            echo 'USER INSERTED';
-        }catch (PDOException $e) {
-            echo 'ERROR IN INSERT : ' . $e->getMessage();
-        } 
+
+if($exist==true)
+{
+    echo "<h3>$Texist</h3>";
+}
+else {
+    echo "<h3>Not inserted or connected to new Account!!</h3>";
 }
 ?>
 
