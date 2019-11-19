@@ -12,7 +12,8 @@ html {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
-    
+    margin: 0px;
+    border: 0px;
 }
 
 /* ===================
@@ -53,7 +54,37 @@ border-color: #31347B;
  
 }
 
+.main-admin {
+   display: flex;
+}
 
+.sidebar {
+    flex: 0.5;
+    height: 530px;
+    background-color: rgb(194, 193, 214);
+}
+
+.content h3{
+    color: cornflowerblue;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content { 
+    flex: 3;
+   height: 500px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 10px;
+    
+}
+
+ul li:hover {
+    background-color: honeydew;
+    color: rgb(189, 46, 46);
+}
 
 /* ============
     menu-nav
@@ -161,6 +192,7 @@ border-color: #31347B;
     text-align: center;    
 }
 
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -264,45 +296,6 @@ nav a:hover {
     width:90%;
 }
 
-<<<<<<< HEAD
-.question{
-    height: 50px;
-    text-align: center;
-    font-style: oblique;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 60px;
-    color: rgb(61, 78, 175);
-    
-}
-=======
-.main-box .response .question{
-    
-    display:inline;
-    display:flex;
-    margin:auto;
-    /* justify-content: space-around; */
-}
-
-.response {
-    margin-left:20%;
-}
-
-.question {
-    margin-right:20%;
-    
-}
-
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
-
-.reponse{
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 80px;
-    display: flex;
-    justify-content: space-around;
-}
 
 
 
