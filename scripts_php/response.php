@@ -43,6 +43,70 @@ include("../scripts_php/connexion.php");
                     ?></div>
                 </div>
 
+<<<<<<< HEAD
+=======
+                    <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
+                        <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
+
+                            <?php 
+                            
+                            //$questions= selectquizResp($TB_Response,$conn,'id_quiz',$id);
+
+                            $b_resp = selectquizRespType($TB_Response,$conn,'id_quiz','valor',$id,1);
+
+                            $m_resp = selectquizRespType($TB_Response,$conn,'id_quiz','valor',$id,0);
+
+                            //var_dump($b_resp);
+
+                            $rand=random_int(0, 3);
+                            
+                            
+                            if($rand==0)
+                            {
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
+                                
+                                echo "<input type='button' value='Next' id='but'>";
+                            }
+
+                            else if($rand==1) {
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
+                                
+                                echo "<input type='button' value='Next' id='but'>";
+
+                            }
+
+                            else if($rand==2) {
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
+                                
+                                echo "<input type='button' value='Next' id='but'>";
+                            }
+
+                            else if($rand==3)
+                            {
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
+                                
+                                echo "<input type='button' value='Next' id='but'>";
+                            }
+
+                            ?>
+                           <a id="trap" href='../scripts_php/response_compare.php'><!-- nothing --></a></div>
+                            
+                            
+                        </form>
+                    </div>
+>>>>>>> ac9ae39c0a7daf5a45ec94ffdfd151b6dab0cc5d
 
                 <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
                     <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
@@ -75,7 +139,7 @@ include("../scripts_php/connexion.php");
     let quest = <?php echo json_encode($quest); ?>;
     let id = <?php echo json_encode($id); ?>;
     let resp = [];
-    const RESULT=null;
+    
     //console.log(id);
 
 //console.log(jsval);
@@ -85,6 +149,24 @@ function chargeQuest(count)
     question.innerHTML = quest[count];
 }
 
+function saveResponseCheck()
+{
+    var selected = new Array();
+
+$(document).ready(function() {
+
+  $("input:checkbox[name=resp]:checked").each(function() {
+       selected.push($(this).val());
+       //console.log(selected);
+  });
+
+});
+return selected;
+}
+
+
+
+/*
 function saveresp(){
     let resp = document.getElementById('resp').value;
     return resp;
@@ -97,15 +179,20 @@ function myJavascriptFunction() {
 }
 
 
-
+*/
 nextBut.addEventListener("click",function(event){
+
+
     
+   
     if(counter<10){
     chargeQuest(counter);
-    resp[counter-1]= saveresp();
-    console.log( resp[counter-1]);
+    //resp[counter-1]= saveresp();
+    //console.log( resp[counter-1]);
     counter++;
-    }
+    //let resp = document.getElementById('resp').value;
+    //console.log(resp);
+    }/*
     else{
         resp[9]=saveresp();
         resp[10]=id;
@@ -135,8 +222,8 @@ nextBut.addEventListener("click",function(event){
 
     //console.log(resp);
 
-
-});
+*/
+}); 
 </script>
 
 <?php 

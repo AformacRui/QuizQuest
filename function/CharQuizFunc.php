@@ -61,6 +61,24 @@ function selectquizResp($T_name,$connexion,$field,$id) {
     return $resp;
 }
 
+function selectquizRespType($T_name,$connexion,$field,$field2,$id,$type) {
+    $resp =[];
+    $stmt = $connexion->prepare("SELECT * FROM $T_name where $field=$id AND $field2=$type");
+    $stmt->execute();
+
+    $stmt->setFetchMode(PDO::FETCH_ASSOC);
+
+    foreach($stmt->fetchAll() as $k=>$v) {
+        $resp[$k]= $v['Response'];
+    }
+
+    return $resp;
+}
+
+
+
+
+
 function compare($data1,$data2,$data3){
     $max=10;
     $RC=0;
