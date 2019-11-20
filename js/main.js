@@ -1,36 +1,3 @@
-<<<<<<< HEAD
-// JQuery code
-
-  $('#clickChoice1').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice1').hide();
-  })
-
-  $('#clickChoice2').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice2').hide();
-  })
-
-  $('#clickChoice3').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice3').hide();
-  })
-
-  $('#clickChoice4').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice4').hide();
-  })
-
-  $('#clickChoice5').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice5').hide();
-  })
-
-  $('#clickChoice6').on('click', function(){
-    $('#validChoice').load('./template/quizchoice.php');
-    $('#clickChoice6').hide();
-  })
-=======
 /**
  *  // JS code
   let event1 = document.getElementById("clickChoice1");
@@ -73,7 +40,6 @@
 */
 
 // JQuery code
->>>>>>> hermann
 
   $('#clickChoice1').on('click', function(){
     $('#validChoice').load('./template/quizchoice.php');
@@ -105,8 +71,4 @@
     $('#clickChoice6').hide();
   })
 
-<<<<<<< HEAD
-/*   .clickChoice1.insertAfter() */
-=======
-  .clickChoice1.insertAfter()
->>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
+

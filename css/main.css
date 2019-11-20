@@ -42,17 +42,12 @@ body {
  
 }
  
-<<<<<<< HEAD
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-
-=======
 .btn-default:hover, 
 .btn-default:focus, 
 .btn-default:active, 
 .btn-default.active, 
 .open 
 .dropdown-toggle.btn-default {
->>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
  
 background:#729EBF;
  
@@ -305,8 +300,6 @@ nav a:hover {
     width:90%;
 }
 
-<<<<<<< HEAD
-=======
 .question{
     height: 50px;
     text-align: center;
@@ -326,7 +319,6 @@ nav a:hover {
     display: flex;
     justify-content: space-around;
 }
->>>>>>> c9b5f4edbeca0304ebf92ced2ac4a13938fac04b
 
 
 
