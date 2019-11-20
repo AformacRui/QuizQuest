@@ -30,7 +30,7 @@ if(isset($_SESSION['userName']))
                     echo "<nav class='d-inline'>";
                         echo "<ul class='flex-column flex-sm-row'>";
                             echo "<li><a href='../scripts_php/logout.php' class='btn btn-default btn-lg' role='button' aria-pressed='true'><p>Logout</p></a></li>";
-                            echo "<li><a href='../scripts_php/menage.php' class='btn btn-default btn-lg' role='button' aria-pressed='true'><p>Menage</p></a></li>";
+                            echo "<li><a href='../scripts_php/menage.php' class='btn btn-default btn-lg' role='button' aria-pressed='true'><p>Admin</p></a></li>";
                             echo "<li><a href='../scripts_php/insert_quiz.php' class='btn btn-default btn-lg' role='button' aria-pressed='true'><p>Q_Créateur</p></a></li>";
                         echo "</ul>";
                     echo "</nav>";

@@ -63,39 +63,39 @@ include("../scripts_php/connexion.php");
                             
                             if($rand==0)
                             {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$b_resp[0]'><label id='lab1' >$b_resp[0]</label><br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[1]'><label id='lab3' >$m_resp[1]</label><br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[2]'><label id='lab4' >$m_resp[2]</label><br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$b_resp[0]'><label id='lab1' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[1]'><label id='lab3' >$m_resp[1]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[2]'><label id='lab4' >$m_resp[2]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
 
                             else if($rand==1) {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'><label id='lab1' >$m_resp[2]</label><br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$b_resp[0]'><label id='lab3' >$b_resp[0]</label><br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[1]'><label id='lab4' >$m_resp[1]</label><br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[2]'><label id='lab1' >$m_resp[2]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$b_resp[0]'><label id='lab3' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[1]'><label id='lab4' >$m_resp[1]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
 
                             }
 
                             else if($rand==2) {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[1]'><label id='lab1' >$m_resp[1]</label><br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$b_resp[0]'><label id='lab2' >$b_resp[0]</label><br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[2]'><label id='lab3' >$m_resp[2]</label><br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[0]'><label id='lab4' >$m_resp[0]</label><br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[1]'><label id='lab1' >$m_resp[1]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$b_resp[0]'><label id='lab2' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[2]'><label id='lab3' >$m_resp[2]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[0]'><label id='lab4' >$m_resp[0]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
 
                             else if($rand==3)
                             {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'><label id='lab1'>$m_resp[2]</label><br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[1]'><label id='lab2'>$m_resp[1]</label><br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[0]'><label id='lab3'>$m_resp[0]</label><br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$b_resp[0]'><label id='lab4'>$b_resp[0]</label><br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[2]'><label id='lab1'>$m_resp[2]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[1]'><label id='lab2'>$m_resp[1]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[0]'><label id='lab3'>$m_resp[0]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$b_resp[0]'><label id='lab4'>$b_resp[0]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
@@ -157,7 +157,7 @@ function saveResponseCheck()
 
     $(document).ready(function() {
 
-    $("input:checkbox[name=resp]:checked").each(function() {
+    $("input:radio[name=resp]:checked").each(function() {
        selected.push($(this).val());
        //console.log(selected);
     });

@@ -1,5 +1,6 @@
 <?php 
            session_start();
+           //$_SESSION['userName']="visitor";
            if(isset($_SESSION['userName'])) {
              echo "Your session is running " . $_SESSION['userName'];
            }
@@ -10,10 +11,17 @@
 include("head.php");
 include("../scripts_php/connexion.php");
 
+$active_user = $_SESSION['userName'];
 
-if(isset($_SESSION['userName'])=="visitor"){
+$nick=$_POST["nickRequest"];
+$pass=$_POST["PassRequest"];
+$exist=false;
+$inserted=false;
+$e_user=false;
+$e_pass=false;
 
-    $exist=false;
+//var_dump($_POST);
+if(strcmp("visitor",$active_user)==0){
 
     $stmt = $conn->prepare("SELECT * FROM $TB_per");
     $stmt->execute();
@@ -23,8 +31,7 @@ if(isset($_SESSION['userName'])=="visitor"){
             $nick_db[$k] =$v['Nickname'];    
     }
 
-    $nick=$_POST["nickRequest"];
-    $pass=$_POST["PassRequest"];
+
     
     foreach($nick_db as $db){
         if(strcmp($nick,$db) == 0){
@@ -35,21 +42,30 @@ if(isset($_SESSION['userName'])=="visitor"){
     if($exist==true){
         $Texist="Account already exists!!";
     }
-    else{
+
+    if(strlen($pass)<=0){
+        $Tpass ="You didn't indicate a password!!";
+        $e_pass= true;
+    }
+
+    if(strlen($nick)<=0){
+        $Tnick ="You didn't indicate your nickname!!";
+        $e_user = true;
+    }
+
+    if($exist==false && strlen($pass)>0 && strlen($nick)>0){
         $_SESSION['userName'] = $nick;
 
         try {
-            $dev1 = "INSERT INTO $TB_per (Nickname, PassW, User_type)
+            $user = "INSERT INTO $TB_per (Nickname, PassW, User_type)
             VALUES ('$nick','$pass','Usr')";
-            $conn->prepare($dev1)->execute();
+            $conn->prepare($user)->execute();
             echo 'USER INSERTED';
+            $inserted=true;
         }catch (PDOException $e) {
             echo 'ERROR IN INSERT : ' . $e->getMessage();
         } 
     }
-    
-    
-    
 }
 
 
@@ -70,20 +86,35 @@ if(isset($_SESSION['userName'])=="visitor"){
 
 <?php
 
-$verify=$_SESSION['userName'];
-if(strcmp($verify,$nick)==0){
+
+if($inserted==true){
 
     echo "<h3>User Inserted and Connected!</h3>";
     
 }
-
-if($exist==true)
-{
-    echo "<h3>$Texist</h3>";
-}
 else {
-    echo "<h3>Not inserted or connected to new Account!!</h3>";
+    if($exist==false && $e_user==false && $e_pass==false){
+        echo "<h3>You are connected</h3>";
+    }
+
+    if($exist==true)
+    {
+        echo "<h3>$Texist</h3>";
+    }
+
+    if($e_user==true){
+        echo "<h3>$Tnick</h3>";
+    }
+
+    if($e_pass==true){
+        echo "<h3>$Tpass</h3>";
+    }
 }
+
+
+/* else {
+    echo "<h3>Not inserted or connected to new Account!!</h3>";
+} */
 ?>
 
 </div>
