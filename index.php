@@ -1,4 +1,14 @@
-<?php include("scripts_php/head.php");
+<?php 
+           session_start();
+           //$_SESSION['userName'] ="visitor";
+           if(isset($_SESSION['userName'])) {
+             echo "Your session is running " . $_SESSION['userName'];
+           }
+           else{
+            $_SESSION['userName'] = "visitor";
+           }
+           
+include("scripts_php/head.php");
 include("scripts_php/connexion.php");
 
 ?>
@@ -10,14 +20,7 @@ include("scripts_php/connexion.php");
         
 
         <?php 
-           session_start();
-           //$_SESSION['userName'] ="visitor";
-           if(isset($_SESSION['userName'])) {
-             echo "Your session is running " . $_SESSION['userName'];
-           }
-           else{
-            $_SESSION['userName'] = "visitor";
-           }
+
         
            
         include("template/header.php");?>
