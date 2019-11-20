@@ -30,21 +30,20 @@
             $pass[$k] = $v['PassW'];    
     }
 
+    $aux = sizeof($nick);
 
-
-    foreach($nick as $inserted) {
-        if(strcmp($inserted,$postnick) ==0){
+    for($i=0 ; $i<$aux ;$i++) {
+        if(strcmp($nick[$i],$postnick) ==0){
             $userinserted = TRUE;
         }
-    }
-    foreach($pass as $pinsert)
-    {
-        if(strcmp($inserted,$pwinserted) ==0){
+        if(strcmp($pass[$i],$postpw) ==0){
             $pwinserted = TRUE;
+            
         }
     }
 
-    if(($userinserted==TRUE && $userinserted==TRUE)){
+
+    if(($userinserted==TRUE && $pwinserted==TRUE)){
         $_SESSION['userName'] = $postnick;
         
         //echo $_SESSION['userName'];
@@ -65,13 +64,13 @@
                 <br><br><br><br>
 <?php
 
-    if(($userinserted==TRUE && $userinserted==TRUE)){
+    if(($userinserted==TRUE && $pwinserted==TRUE)){
         echo "<h3>Session Started</h3>";
         //echo $_SESSION['userName'];
     }
 
 
-    if(($userinserted==FALSE && $userinserted==TRUE) ||($userinserted==TRUE && $userinserted==FALSE)||(($userinserted==FALSE && $userinserted==FALSE))){
+    if(($userinserted==FALSE && $pwinserted==TRUE) ||($userinserted==TRUE && $pwinserted==FALSE)||(($userinserted==FALSE && $pwinserted==FALSE))){
         $incorrect = true;
     }
 

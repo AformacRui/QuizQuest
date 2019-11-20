@@ -32,6 +32,7 @@
         <![endif]-->
         <?php 
            session_start();
+           //$_SESSION['userName'] ="visitor";
            if(isset($_SESSION['userName'])) {
              echo "Your session is running " . $_SESSION['userName'];
            }

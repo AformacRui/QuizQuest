@@ -46,17 +46,22 @@ include("../scripts_php/head.php");
         $id_q=$response;
     }
 
+    for($i=0 ; $i<sizeof($resp);$i++){
+        $resp_f[$i] = $resp[$i][0];
+    }
     //var_dump($id_q);
 
 
 
     $questions_bd= selectquiz('question',$conn,'id_quiz',$id_q);
-    $response_bd = selectquizResp('response',$conn,'id_quiz',$id_q);
+    $response_bd = selectquizRespType($TB_Response,$conn,'id_quiz','valor',$id_q,1);
+
+    
 
     //var_dump($questions_bd);
     //var_dump($response_bd);  
 
-    $result = compare($response_bd,$resp,$questions_bd);
+    $result = compare($response_bd,$resp_f,$questions_bd);
 
     //var_dump($result);
 

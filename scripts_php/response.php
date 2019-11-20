@@ -63,39 +63,39 @@ include("../scripts_php/connexion.php");
                             
                             if($rand==0)
                             {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$b_resp[0]'><label id='lab1' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[1]'><label id='lab3' >$m_resp[1]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[2]'><label id='lab4' >$m_resp[2]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
 
                             else if($rand==1) {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[2]'><label id='lab1' >$m_resp[2]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[0]'><label id='lab2' >$m_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$b_resp[0]'><label id='lab3' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[1]'><label id='lab4' >$m_resp[1]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
 
                             }
 
                             else if($rand==2) {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[1]'><label id='lab1' >$m_resp[1]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$b_resp[0]'><label id='lab2' >$b_resp[0]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[2]'><label id='lab3' >$m_resp[2]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$m_resp[0]'><label id='lab4' >$m_resp[0]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
 
                             else if($rand==3)
                             {
-                                echo "<h6>Response 1 : </h6> <input id='check1' type='checkbox' name='resp' value='$m_resp[2]'>$m_resp[2]<br>";
-                                echo "<h6>Response 2 : </h6> <input id='check2' type='checkbox' name='resp' value='$m_resp[1]'>$m_resp[1]<br>";
-                                echo "<h6>Response 3 : </h6> <input id='check3' type='checkbox' name='resp' value='$m_resp[0]'>$m_resp[0]<br>";
-                                echo "<h6>Response 4 : </h6> <input id='check4' type='checkbox' name='resp' value='$b_resp[0]'>$b_resp[0]<br>";
+                                echo "<h6>Response 1 : </h6> <input id='check1' type='radio' name='resp' value='$m_resp[2]'><label id='lab1'>$m_resp[2]</label><br>";
+                                echo "<h6>Response 2 : </h6> <input id='check2' type='radio' name='resp' value='$m_resp[1]'><label id='lab2'>$m_resp[1]</label><br>";
+                                echo "<h6>Response 3 : </h6> <input id='check3' type='radio' name='resp' value='$m_resp[0]'><label id='lab3'>$m_resp[0]</label><br>";
+                                echo "<h6>Response 4 : </h6> <input id='check4' type='radio' name='resp' value='$b_resp[0]'><label id='lab4'>$b_resp[0]</label><br>";
                                 
                                 echo "<input type='button' value='Next' id='but'>";
                             }
@@ -139,8 +139,10 @@ include("../scripts_php/connexion.php");
     let quest = <?php echo json_encode($quest); ?>;
     let id = <?php echo json_encode($id); ?>;
     let resp = [];
+    let b_resp = <?php echo json_encode($b_resp); ?>;
+    let m_resp = <?php echo json_encode($m_resp); ?>;
     
-    //console.log(id);
+    //console.log(m_resp);
 
 //console.log(jsval);
 
@@ -153,48 +155,87 @@ function saveResponseCheck()
 {
     var selected = new Array();
 
-$(document).ready(function() {
+    $(document).ready(function() {
 
-  $("input:checkbox[name=resp]:checked").each(function() {
+    $("input:radio[name=resp]:checked").each(function() {
        selected.push($(this).val());
        //console.log(selected);
-  });
+    });
 
 });
 return selected;
 }
 
+function changeQuizOrder(question) {
+    
 
+        document.getElementById('lab1').innerText = question[0];
+        document.getElementById('check1').value= question[0];
 
-/*
-function saveresp(){
-    let resp = document.getElementById('resp').value;
-    return resp;
+        document.getElementById('lab2').innerText = question[1];
+        document.getElementById('check2').value= question[1];
+
+        document.getElementById('lab3').innerText = question[2];
+        document.getElementById('check3').value= question[2];
+
+        document.getElementById('lab4').innerText = question[3];
+        document.getElementById('check4').value= question[3];
+    //return var1;
+}
+
+function createResp(ind,b_resp,m_resp){
+    let quest = [];
+    quest[0]=b_resp[ind];
+
+    let n = ind * 3;
+
+    quest[1] = m_resp[n];
+    quest[2] = m_resp[n+1];
+    quest[3] = m_resp[n+2];
+
+    return quest;
 }
 
 
-function myJavascriptFunction() { 
-  var javascriptVariable = "helo";
-  window.location.href = "response.php?name=" + javascriptVariable; 
+//randomize array
+
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
 }
 
 
-*/
+
 nextBut.addEventListener("click",function(event){
 
-
     
-   
+    
+    //getRandomInt(4);
+
     if(counter<10){
     chargeQuest(counter);
-    //resp[counter-1]= saveresp();
+    resp[counter-1]= saveResponseCheck();
+
+    let questresp = createResp(counter,b_resp,m_resp)
+    let shuffleresp = shuffleArray(questresp);
+    //console.log(shuffleresp);
+    changeQuizOrder(shuffleresp);
+    
+    
     //console.log( resp[counter-1]);
     counter++;
+    //let test = saveResponseCheck();
+    console.log(resp);
     //let resp = document.getElementById('resp').value;
     //console.log(resp);
-    }/*
+    }
     else{
-        resp[9]=saveresp();
+        resp[9]=saveResponseCheck();
         resp[10]=id;
         document.getElementById('but').innerHTML = "<h3>Quiz Ended</h3>";
         
@@ -216,13 +257,13 @@ nextBut.addEventListener("click",function(event){
           });
 
 
-        document.getElementById('trap').click();// change page
+        document.getElementById('trap').click();// change page */
     }
 
 
     //console.log(resp);
 
-*/
+
 }); 
 </script>
 
@@ -234,3 +275,4 @@ $_SESSION["user_response"]= $_POST['content'];
 
 </body>
 </html>
+

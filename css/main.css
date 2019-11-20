@@ -36,15 +36,23 @@ body {
 
 .btn-default{
         
-        color:white !important;
-        background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-        background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    color:white !important;
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
  
 }
  
+<<<<<<< HEAD
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
- 
- 
+
+=======
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default.active, 
+.open 
+.dropdown-toggle.btn-default {
+>>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
  
 background:#729EBF;
  
@@ -223,7 +231,6 @@ nav a:hover {
 
 .main {
     padding: 30px 0;
-    
 }
 
 .main article h1 {
@@ -298,6 +305,28 @@ nav a:hover {
     width:90%;
 }
 
+<<<<<<< HEAD
+=======
+.question{
+    height: 50px;
+    text-align: center;
+    font-style: oblique;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 60px;
+    color: rgb(61, 78, 175);
+    
+}
+
+.reponse{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+>>>>>>> c9b5f4edbeca0304ebf92ced2ac4a13938fac04b
 
 
 
