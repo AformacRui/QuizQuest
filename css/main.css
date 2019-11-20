@@ -41,8 +41,7 @@ body {
 }
  
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
- 
- 
+
  
 background:#729EBF;
  
@@ -241,12 +240,7 @@ nav a:hover {
     width:150%;
     overflow:scroll;
     overflow-x:hidden;
-<<<<<<< HEAD
     height: 400px;    
-=======
-    height: 50vh;
-    
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 }
 
 .main-container .main-box{
@@ -268,7 +262,6 @@ nav a:hover {
     width:90%;
 }
 
-<<<<<<< HEAD
 .question{
     height: 50px;
     text-align: center;
@@ -279,25 +272,6 @@ nav a:hover {
     color: rgb(61, 78, 175);
     
 }
-=======
-.main-box .response .question{
-    
-    display:inline;
-    display:flex;
-    margin:auto;
-    /* justify-content: space-around; */
-}
-
-.response {
-    margin-left:20%;
-}
-
-.question {
-    margin-right:20%;
-    
-}
-
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
 
 .reponse{
     width: 50%;

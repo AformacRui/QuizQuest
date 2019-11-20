@@ -39,7 +39,6 @@
   });
 */
 
-<<<<<<< HEAD
 // JQuery code
 
   $('#clickChoice1').on('click', function(){
@@ -72,7 +71,4 @@
     $('#clickChoice6').hide();
   })
 
-  .clickChoice1.insertAfter()
-=======
-
->>>>>>> abda4d5af3903e4c5153d73f41b343a3c1f76375
+/*   .clickChoice1.insertAfter() */
