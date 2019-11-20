@@ -1,4 +1,3 @@
-
 <?php
 
 $DB_USER='Herui';
@@ -75,4 +74,3 @@ else {
 }
 
 ?>
-

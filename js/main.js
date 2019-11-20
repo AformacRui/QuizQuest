@@ -71,4 +71,4 @@
     $('#clickChoice6').hide();
   })
 
-/*   .clickChoice1.insertAfter() */
+

@@ -12,6 +12,8 @@ html {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    margin: 0px;
+    border: 0px;
 }
 
 /* ===================
@@ -24,7 +26,7 @@ body {
 }
 
 
-.hmenu{
+.menu{
     display: inline;
     display:flex;
     margin-right:30px; 
@@ -34,14 +36,18 @@ body {
 
 .btn-default{
         
-        color:white !important;
-        background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-        background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    color:white !important;
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
  
 }
  
-.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
-
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default.active, 
+.open 
+.dropdown-toggle.btn-default {
  
 background:#729EBF;
  
@@ -51,7 +57,37 @@ border-color: #31347B;
  
 }
 
+.main-admin {
+   display: flex;
+}
 
+.sidebar {
+    flex: 0.5;
+    height: 530px;
+    background-color: rgb(194, 193, 214);
+}
+
+.content h3{
+    color: cornflowerblue;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.content { 
+    flex: 3;
+   height: 500px;
+}
+
+.sidebar ul li {
+    list-style: none;
+    padding: 10px;
+    
+}
+
+ul li:hover {
+    background-color: honeydew;
+    color: rgb(189, 46, 46);
+}
 
 /* ============
     menu-nav
@@ -159,6 +195,7 @@ border-color: #31347B;
     text-align: center;    
 }
 
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -189,7 +226,6 @@ nav a:hover {
 
 .main {
     padding: 30px 0;
-    
 }
 
 .main article h1 {
@@ -237,10 +273,12 @@ nav a:hover {
 }
 
 .main-container .row {
-    width:150%;
+    width:100%;
     overflow:scroll;
     overflow-x:hidden;
-    height: 400px;    
+    height: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 .main-container .main-box{
