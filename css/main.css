@@ -12,6 +12,7 @@ html {
 
 body {
     font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    
 }
 
 /* ===================
@@ -24,7 +25,7 @@ body {
 }
 
 
-.hmenu{
+.menu{
     display: inline;
     display:flex;
     margin-right:30px; 
@@ -34,14 +35,23 @@ body {
 
 .btn-default{
         
-        color:white !important;
-        background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
-        background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
+    color:white !important;
+    background-image:-webkit-linear-gradient(top, #729EBF 0%, #333A40 100%);
+    background-image: linear-gradient(to bottom, #729EBF 0%, #333A40 100%);
  
 }
  
+<<<<<<< HEAD
 .btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
 
+=======
+.btn-default:hover, 
+.btn-default:focus, 
+.btn-default:active, 
+.btn-default.active, 
+.open 
+.dropdown-toggle.btn-default {
+>>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
  
 background:#729EBF;
  
@@ -159,6 +169,7 @@ border-color: #31347B;
     text-align: center;    
 }
 
+
 /* ==============
     MOBILE: Menu
    ============== */
@@ -189,7 +200,6 @@ nav a:hover {
 
 .main {
     padding: 30px 0;
-    
 }
 
 .main article h1 {

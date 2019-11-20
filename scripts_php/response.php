@@ -14,9 +14,6 @@ include("../scripts_php/connexion.php");
 
 
 
-
-
-
 ?>
 
 
@@ -29,24 +26,25 @@ include("../scripts_php/connexion.php");
     <?php include("../template/main_nav_global.php"); ?>
             
     <div class="main-container">
-            <div class="main-box">
-                    <div class="question col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
-                    <h5 id="Qnumber">Question</h5><br>
-                        <div id="Quest"><?php 
-                        $id=$_POST["id_q"];
-                        //var_dump($id);
+        <div class="main-box">
+                <div class="question col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
+                <h5 id="Qnumber">Question</h5><br>
+                    <div id="Quest"><?php 
+                    $id=$_POST["id_q"];
+                    //var_dump($id);
 
-                        $_SESSION["quiz_id"] = $_POST["id_q"];
-                        
+                    $_SESSION["quiz_id"] = $_POST["id_q"];
+                    
 
-                        $quest= selectquiz('question',$conn,'id_quiz',$id);
+                    $quest= selectquiz('question',$conn,'id_quiz',$id);
 
-                        echo $quest[0];
-                        
-                        ?></div>
-                    </div>
+                    echo $quest[0];
+                    
+                    ?></div>
+                </div>
 
-
+<<<<<<< HEAD
+=======
                     <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
                         <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
 
@@ -108,9 +106,20 @@ include("../scripts_php/connexion.php");
                             
                         </form>
                     </div>
+>>>>>>> ac9ae39c0a7daf5a45ec94ffdfd151b6dab0cc5d
 
+                <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
+                    <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
+                        <h6>Response</h6> <input id="resp" type="text" name="responseGiven.$i">
+                        <input type="button" value="Next" id="but">
+                        <a id="trap" href='../scripts_php/response_compare.php'><!-- nothing --></a></div>
+                        
+                        
+                    </form>
                 </div>
+
             </div>
+        </div>
     </div>
 </div>
 

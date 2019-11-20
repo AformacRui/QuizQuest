@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
 <?php
 
 $DB_USER='Herui';
@@ -75,4 +78,7 @@ else {
 }
 
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
