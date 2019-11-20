@@ -43,8 +43,6 @@ include("../scripts_php/connexion.php");
                     ?></div>
                 </div>
 
-<<<<<<< HEAD
-=======
                     <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
                         <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
 
@@ -106,13 +104,8 @@ include("../scripts_php/connexion.php");
                             
                         </form>
                     </div>
->>>>>>> ac9ae39c0a7daf5a45ec94ffdfd151b6dab0cc5d
 
-                <div class="response col-xs-12 col-sm-6 col-lg-4 list-group-item d-flex justify-content-between align-items-center">
-                    <form action="../scripts_php/response_compare.php" method="post" class="form_resp">
-                        <h6>Response</h6> <input id="resp" type="text" name="responseGiven.$i">
-                        <input type="button" value="Next" id="but">
-                        <a id="trap" href='../scripts_php/response_compare.php'><!-- nothing --></a></div>
+               
                         
                         
                     </form>
