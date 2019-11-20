@@ -14,12 +14,6 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <link rel="stylesheet" href="../css/normalize.min.css">
-<<<<<<< HEAD
         <link rel="stylesheet" href="../css/main.css">
     
         </head>
-=======
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/main.css">
-    </head>
->>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06

@@ -11,14 +11,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<<<<<<< HEAD
-?>
-=======
         <link rel="stylesheet" href="css/normalize.min.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="css/main.css">
         
->>>>>>> f5fd24090ad4b8f567c333e68bbb2f131a55cd06
 
         <!--Nav-container Script & link-->
         
