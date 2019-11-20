@@ -36,7 +36,7 @@
              echo "Your session is running " . $_SESSION['userName'];
            }
         
-        include("template/header.php");?>
+        include("template/header.php");?> 
 
         <div class="container-fluid d-flex ">
             
