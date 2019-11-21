@@ -125,7 +125,7 @@ include("../scripts_php/connexion.php");
 <?php include("../scripts_php/scripts.php");?>
 
 <script type="text/javascript">
-
+    //vars in use
     let nextBut = document.getElementById('but');
     let question = document.getElementById('Quest');
     let counter=1;
@@ -139,11 +139,15 @@ include("../scripts_php/connexion.php");
 
 //console.log(jsval);
 
+
+//charge questions
 function chargeQuest(count)
 {
     question.innerHTML = quest[count];
 }
 
+
+//save responses on js array
 function saveResponseCheck()
 {
     var selected = new Array();
@@ -159,6 +163,8 @@ function saveResponseCheck()
 return selected;
 }
 
+
+//charge response function
 function changeQuizOrder(question) {
     
 
@@ -176,6 +182,8 @@ function changeQuizOrder(question) {
     //return var1;
 }
 
+
+//create response map
 function createResp(ind,b_resp,m_resp){
     let quest = [];
     quest[0]=b_resp[ind];
@@ -190,8 +198,7 @@ function createResp(ind,b_resp,m_resp){
 }
 
 
-//randomize array
-
+//randomize response array
 function shuffleArray(array) {
     for (var i = array.length - 1; i > 0; i--) {
         var j = Math.floor(Math.random() * (i + 1));
@@ -206,12 +213,9 @@ function shuffleArray(array) {
 
 nextBut.addEventListener("click",function(event){
 
-    
-    
-    //getRandomInt(4);
 
     if(counter<10){
-    chargeQuest(counter);
+    chargeQuest(counter);   
     resp[counter-1]= saveResponseCheck();
 
     let questresp = createResp(counter,b_resp,m_resp)
@@ -221,11 +225,10 @@ nextBut.addEventListener("click",function(event){
     
     
     //console.log( resp[counter-1]);
-    counter++;
-    //let test = saveResponseCheck();
-    console.log(resp);
-    //let resp = document.getElementById('resp').value;
+    counter++; //change index
+
     //console.log(resp);
+
     }
     else{
         resp[9]=saveResponseCheck();
@@ -252,9 +255,6 @@ nextBut.addEventListener("click",function(event){
 
         document.getElementById('trap').click();// change page */
     }
-
-
-    //console.log(resp);
 
 
 }); 
